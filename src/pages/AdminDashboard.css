@@ -1,79 +1,39 @@
-/* src/pages/AdminDashboard.css */
 .admin-dashboard {
-    background-color: #f8f9fa;
-    min-height: calc(100vh - 56px); /* Ajuste para altura completa menos navbar */
-  }
-  
-  .stat-card {
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
-  }
-  
-  .stat-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
-  }
-  
-  .card {
-    border: none;
-    border-radius: 10px;
-  }
-  
-  .card-header {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    font-weight: 600;
-  }
-  
-  .table th {
-    border-top: none;
-    font-weight: 600;
-    color: #6c757d;
-  }
-  
-  .avatar-sm {
-    width: 30px;
-    height: 30px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.875rem;
-  }
-  
-  .chart-placeholder {
-    background-color: #f8f9fa;
-    border: 2px dashed #dee2e6;
-  }
-  
-  .btn-danger, .btn-outline-danger {
-    transition: all 0.3s ease;
-  }
-  
-  .btn-danger:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
-  }
-  
-  .btn-outline-danger:hover {
-    background-color: #dc3545;
-    color: white;
-  }
-  
-  .alert {
-    transition: all 0.3s ease;
-  }
-  
-  .alert:hover {
-    transform: translateX(5px);
-  }
-  
-  @media (max-width: 768px) {
-    .stat-card {
-      margin-bottom: 1rem;
-    }
-    
-    .chart-placeholder {
-      width: 150px !important;
-      height: 150px !important;
-    }
-  }
+  background: var(--gamer-bg);
+  color: var(--gamer-text);
+  min-height: calc(100vh - 56px);
+}
+.admin-dashboard h1 {
+  font-family: var(--gamer-font-code);
+  color: var(--gamer-neon);
+  text-shadow: 0 0 5px var(--gamer-neon);
+}
+.card.stat-card {
+  background: var(--gamer-surface);
+  border: 1px solid var(--gamer-neon);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px var(--gamer-accent);
+}
+.card-header {
+  font-family: var(--gamer-font-code);
+  background: var(--gamer-surface);
+  border-bottom: 1px solid var(--gamer-neon);
+}
+.table thead {
+  background: var(--gamer-surface);
+}
+.table thead th {
+  color: var(--gamer-neon);
+}
+.btn-outline-danger {
+  border-color: var(--gamer-accent);
+  color: var(--gamer-accent);
+}
+.btn-outline-danger:hover {
+  background: var(--gamer-accent);
+  color: var(--gamer-bg);
+  box-shadow: 0 0 10px var(--gamer-accent);
+}

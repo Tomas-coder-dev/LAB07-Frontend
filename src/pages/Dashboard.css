@@ -1,88 +1,36 @@
-/* src/pages/Dashboard.css */
 .dashboard-container {
-    background-color: #f8f9fa;
-    min-height: calc(100vh - 56px); /* Ajuste para altura completa menos navbar */
-  }
-  
-  .welcome-card {
-    transition: all 0.3s ease;
-  }
-  
-  .welcome-card:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
-  }
-  
-  .avatar-lg {
-    width: 70px;
-    height: 70px;
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  
-  .btn-action-card {
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-  }
-  
-  .btn-action-card:hover {
-    background-color: #e9ecef;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .btn-action-card h6 {
-    font-weight: 600;
-  }
-  
-  .activity-timeline {
-    position: relative;
-    padding-left: 30px;
-  }
-  
-  .activity-item {
-    position: relative;
-    padding-bottom: 20px;
-  }
-  
-  .activity-item:last-child {
-    padding-bottom: 0;
-  }
-  
-  .activity-badge {
-    position: absolute;
-    left: -20px;
-    top: 0;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-  }
-  
-  .activity-content {
-    padding-left: 15px;
-  }
-  
-  .activity-content p {
-    margin-bottom: 5px;
-  }
-  
-  .dashboard-loading {
-    min-height: calc(100vh - 56px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f8f9fa;
-  }
-  
-  @media (max-width: 768px) {
-    .welcome-card {
-      text-align: center;
-      flex-direction: column !important;
-    }
-    
-    .avatar-lg {
-      margin-top: 15px;
-    }
-  }
+  background: var(--gamer-bg);
+  color: var(--gamer-text);
+  min-height: calc(100vh - 56px);
+}
+.welcome-card {
+  background: var(--gamer-surface);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,255,255,0.2);
+  transition: box-shadow 0.2s;
+}
+.welcome-card:hover {
+  box-shadow: 0 0 20px var(--gamer-neon);
+}
+.avatar-lg {
+  background: var(--gamer-neon);
+  color: var(--gamer-bg);
+  font-family: var(--gamer-font-code);
+  box-shadow: 0 0 5px var(--gamer-neon);
+}
+.btn-action-card {
+  background: var(--gamer-surface);
+  border: 1px solid var(--gamer-neon);
+  color: var(--gamer-text);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-action-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px var(--gamer-accent);
+}
+.activity-timeline .activity-badge {
+  background: var(--gamer-neon);
+}
+.activity-content p, .activity-content small {
+  color: var(--gamer-text);
+}

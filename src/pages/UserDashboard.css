@@ -1,80 +1,35 @@
-/* src/pages/UserDashboard.css */
 .user-dashboard {
-    background-color: #f8f9fa;
-    min-height: calc(100vh - 56px); /* Ajuste para altura completa menos navbar */
-  }
-  
-  .avatar-lg {
-    width: 80px;
-    height: 80px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-  }
-  
-  .card {
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
-  }
-  
-  .activity-feed {
-    position: relative;
-    padding-left: 60px;
-  }
-  
-  .activity-item {
-    position: relative;
-    padding-bottom: 20px;
-  }
-  
-  .activity-item:last-child {
-    padding-bottom: 0;
-  }
-  
-  .activity-icon {
-    position: absolute;
-    left: -45px;
-    top: 0;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .activity-content {
-    padding-left: 15px;
-  }
-  
-  .activity-content p {
-    margin-bottom: 5px;
-  }
-  
-  .btn-outline-primary {
-    transition: all 0.3s;
-  }
-  
-  .btn-outline-primary:hover {
-    background-color: #0d6efd;
-    color: white;
-  }
-  
-  @media (max-width: 768px) {
-    .activity-feed {
-      padding-left: 40px;
-    }
-    
-    .activity-icon {
-      left: -30px;
-      width: 30px;
-      height: 30px;
-      font-size: 0.8rem;
-    }
-  }
+  background: var(--gamer-bg);
+  color: var(--gamer-text);
+  min-height: calc(100vh - 56px);
+}
+.user-dashboard h1 {
+  color: var(--gamer-neon);
+  font-family: var(--gamer-font-code);
+}
+.avatar-lg {
+  background: var(--gamer-neon);
+  color: var(--gamer-bg);
+  box-shadow: 0 0 5px var(--gamer-neon);
+}
+.card {
+  background: var(--gamer-surface);
+  border-radius: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px var(--gamer-accent);
+}
+.activity-feed .activity-icon {
+  background: var(--gamer-neon);
+  color: var(--gamer-bg);
+}
+.btn-outline-primary {
+  border-color: var(--gamer-neon);
+  color: var(--gamer-neon);
+}
+.btn-outline-primary:hover {
+  background: var(--gamer-neon);
+  color: var(--gamer-bg);
+}

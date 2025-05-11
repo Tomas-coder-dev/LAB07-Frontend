@@ -1,84 +1,41 @@
-/* src/pages/RegisterPage.css */
 .register-container {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    padding: 20px;
-  }
-  
-  .register-card {
-    background: white;
-    border-radius: 15px;
-    padding: 2.5rem;
-    width: 100%;
-    max-width: 500px;
-    border: none;
-  }
-  
-  .register-header {
-    color: #2c3e50;
-  }
-  
-  .register-icon {
-    font-size: 3rem;
-    color: #4e73df;
-    background: rgba(78, 115, 223, 0.1);
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .form-control:focus, .form-select:focus {
-    box-shadow: 0 0 0 0.25rem rgba(78, 115, 223, 0.25);
-    border-color: #4e73df;
-  }
-  
-  .btn-primary {
-    background-color: #4e73df;
-    border: none;
-    padding: 10px;
-    font-weight: 500;
-    transition: all 0.3s;
-  }
-  
-  .btn-primary:hover {
-    background-color: #3a5bca;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(58, 91, 202, 0.3);
-  }
-  
-  .btn-outline-primary {
-    transition: all 0.3s;
-  }
-  
-  .btn-outline-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Animación para el formulario */
-  form {
-    animation: fadeInUp 0.5s ease-out;
-  }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .register-card {
-      padding: 1.5rem;
-    }
-  }
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gamer-bg);
+}
+.register-card {
+  background: var(--gamer-surface);
+  border-radius: 15px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 20px var(--gamer-accent);
+}
+.register-header h2 {
+  font-family: var(--gamer-font-code);
+  color: var(--gamer-accent);
+}
+.form-control, .form-select {
+  background: #2a2a30;
+  border: 1px solid var(--gamer-accent);
+  color: var(--gamer-text);
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--gamer-neon);
+  box-shadow: 0 0 5px var(--gamer-neon);
+}
+.btn-primary {
+  background: var(--gamer-accent);
+  border: none;
+  color: var(--gamer-bg);
+  font-family: var(--gamer-font-code);
+}
+.btn-primary:hover {
+  background: var(--gamer-neon);
+  box-shadow: 0 0 10px var(--gamer-neon);
+}
+.invalid-feedback {
+  color: #f66;
+}

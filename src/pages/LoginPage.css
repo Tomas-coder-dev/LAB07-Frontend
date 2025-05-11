@@ -1,88 +1,44 @@
-/* src/pages/LoginPage.css */
 .login-container {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    padding: 20px;
-  }
-  
-  .login-card {
-    background: white;
-    border-radius: 15px;
-    padding: 2.5rem;
-    width: 100%;
-    max-width: 450px;
-    border: none;
-  }
-  
-  .login-header {
-    color: #2c3e50;
-  }
-  
-  .login-icon {
-    font-size: 3rem;
-    color: #3498db;
-    background: rgba(52, 152, 219, 0.1);
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .input-group-text {
-    background-color: #f8f9fa;
-    transition: all 0.3s;
-  }
-  
-  .form-control:focus {
-    box-shadow: none;
-    border-color: #3498db;
-  }
-  
-  .form-control:focus + .input-group-text {
-    background-color: #e3f2fd;
-    color: #3498db;
-  }
-  
-  .btn-primary {
-    background-color: #3498db;
-    border: none;
-    padding: 10px;
-    font-weight: 500;
-    transition: all 0.3s;
-  }
-  
-  .btn-primary:hover {
-    background-color: #2980b9;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(41, 128, 185, 0.3);
-  }
-  
-  .btn-outline-primary {
-    transition: all 0.3s;
-  }
-  
-  .btn-outline-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Efecto para el formulario */
-  form {
-    animation: fadeIn 0.5s ease-in-out;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gamer-bg);
+}
+.login-card {
+  background: var(--gamer-surface);
+  border-radius: 15px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 0 20px var(--gamer-accent);
+}
+.login-header h2 {
+  font-family: var(--gamer-font-code);
+  color: var(--gamer-neon);
+}
+.form-control {
+  background: #2a2a30;
+  border: 1px solid var(--gamer-neon);
+  color: var(--gamer-text);
+}
+.form-control:focus {
+  box-shadow: 0 0 5px var(--gamer-neon);
+  border-color: var(--gamer-neon-hover);
+}
+.btn-primary {
+  background: var(--gamer-neon);
+  border: none;
+  color: var(--gamer-bg);
+  font-weight: 600;
+  font-family: var(--gamer-font-code);
+}
+.btn-primary:hover {
+  background: var(--gamer-neon-hover);
+  box-shadow: 0 0 10px var(--gamer-neon-hover);
+}
+.alert {
+  background: #330033;
+  border-color: var(--gamer-accent);
+  color: var(--gamer-text);
+}

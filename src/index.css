@@ -1,13 +1,137 @@
-body {
+/* ── IMPORTS ─────────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono&display=swap');
+
+/* ── RESETS BÁSICOS ─────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background: var(--gamer-bg);
+  color: var(--gamer-text);
+  font-family: var(--gamer-font-main);
+  line-height: 1.5;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── VARIABLES GAMER ───────────────────────────────────────────────────── */
+:root {
+  --gamer-bg: #0d0d10;
+  --gamer-surface: #1a1a1f;
+  --gamer-neon: #0ff;
+  --gamer-neon-hover: #6ff;
+  --gamer-text: #e0e0e0;
+  --gamer-accent: #f0f;
+  --gamer-font-main: 'Orbitron', sans-serif;
+  --gamer-font-code: 'Roboto Mono', monospace;
+  --transition-fast: 0.2s ease-in-out;
+}
+
+/* ── ENLACES Y BOTONES ─────────────────────────────────────────────────── */
+a {
+  color: var(--gamer-neon);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--gamer-neon-hover);
+  text-shadow: 0 0 6px var(--gamer-neon-hover);
+}
+
+.btn,
+.nav-link {
+  transition: var(--transition-fast);
+}
+.btn {
+  font-family: var(--gamer-font-code);
+}
+.btn-primary {
+  background: var(--gamer-neon);
+  border: none;
+  color: var(--gamer-bg);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background: var(--gamer-neon-hover);
+  box-shadow: 0 0 8px var(--gamer-neon-hover);
+}
+
+/* ── SCROLLBAR PERSONALIZADO ────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--gamer-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gamer-neon);
+  border-radius: 4px;
+  transition: background var(--transition-fast);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gamer-neon-hover);
+}
+
+/* ── FORMULARIOS ───────────────────────────────────────────────────────── */
+input,
+textarea,
+select {
+  background: var(--gamer-surface);
+  border: 1px solid var(--gamer-neon);
+  color: var(--gamer-text);
+  font-family: var(--gamer-font-main);
+  padding: 0.5rem;
+  transition: var(--transition-fast);
+}
+input::placeholder,
+textarea::placeholder {
+  color: rgba(224,224,224,0.5);
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--gamer-neon-hover);
+  box-shadow: 0 0 6px var(--gamer-neon-hover);
+}
+
+/* ── TARJETAS Y SUPERFICIES ────────────────────────────────────────────── */
+.card,
+.login-card,
+.register-card {
+  background: var(--gamer-surface);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px var(--gamer-accent);
+  transition: var(--transition-fast);
+}
+.card:hover,
+.login-card:hover,
+.register-card:hover {
+  box-shadow: 0 0 30px var(--gamer-neon);
+}
+
+/* ── TIPOGRAFÍA EXTRA ───────────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--gamer-font-code);
+  color: var(--gamer-neon);
+  text-shadow: 0 0 4px var(--gamer-neon);
+  margin-bottom: 1rem;
+}
+
+/* ── UTILIDADES ────────────────────────────────────────────────────────── */
+.text-neon {
+  color: var(--gamer-neon) !important;
+  text-shadow: 0 0 4px var(--gamer-neon);
+}
+.bg-surface {
+  background: var(--gamer-surface) !important;
 }
